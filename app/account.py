@@ -16,3 +16,10 @@ class Account:
 
     def get_current_balance(self, id_num):
         return requests.get('http://some-account-uri/' + id_num)
+    
+    def get_current_balance_adv(self, id_num):
+        response = requests.get('http://some-account-uri/' + id_num)
+        return {
+            'status': response.status_code,
+            'data': response.text
+        }
