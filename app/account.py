@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 # app/account.py
-
+import requests
 
 class Account:
 
@@ -13,3 +13,6 @@ class Account:
         except ConnectionError:
             result = 'Connection error occurred.'
         return result
+
+    def get_current_balance(self, id_num):
+        return requests.get('http://some-account-uri/' + id_num)
