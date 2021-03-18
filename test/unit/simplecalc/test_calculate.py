@@ -1,6 +1,6 @@
 # test/unit/test_calculate.py
 import unittest
-from calculator.calculate import Calculate
+from simplecalc.calculate import Calculate
 
 class TestCalculate(unittest.TestCase):
     """
